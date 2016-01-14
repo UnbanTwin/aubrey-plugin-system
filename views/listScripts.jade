@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1="Script List"
+    ul
+        each item in scripts
+            li Name: #{item.name} Body: #{item.body}
+            br

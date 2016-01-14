@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= "Add new script"
+  form#formNewScript(name="addscript",method="post",action="/addscript")
+      input#inputWeaponName(type="text", placeholder="Name", name="ScriptName")
+      br
+      br
+      textarea#inputWeaponDamage(type="text", placeholder="Script", name="ScriptBody",rows="30", cols="100")
+      br
+      br
+
+      button#btnSubmit(type="submit") submit
