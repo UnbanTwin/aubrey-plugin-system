@@ -32,10 +32,9 @@ router.post('/addscript', function(req,res){
 
 });
 router.get('/listscripts', function(req , res){
-
     //var collection = mongoose.model(Weapon);
     Script.find({}, function(err,docs){
-        res.render('listScripts',{scripts:docs});
+        res.json(docs);
     });
 });
 module.exports = router;
