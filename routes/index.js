@@ -34,7 +34,13 @@ router.post('/addscript', function(req,res){
 router.get('/listscripts', function(req , res){
     //var collection = mongoose.model(Weapon);
     Script.find({}, function(err,docs){
-        res.set({'Access-Control-Allow-Origin' : '*'})
+        res.setHeader('Access-Control-Allow-Origin','*')
+        // Request methods you wish to allow
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+        // Request headers you wish to allow
+        res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
         res.json(docs);
     });
 });
